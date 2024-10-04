@@ -1,12 +1,18 @@
+{% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% tailwind_css %}
     <title>Prediction Result</title>
 </head>
-<body>
-    <h1>Prediction Result</h1>
-    <p>The result is: {{ result }}</p>
+<body class="bg-blue-100 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+        <h1 class="text-3xl font-bold mb-6">Prediction Result</h1>
+        <p class="text-xl text-gray-700">The result is: <span class="font-semibold text-blue-500">{{ result }}</span></p>
+    </div>
+
 </body>
 </html>
